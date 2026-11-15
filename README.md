@@ -1,53 +1,50 @@
-Smart Resume Parser 🧠📄
+# Resume Parser and Role Matching Tool
 
-A simple Python-based tool that reads PDF resumes and checks if the applicant is a good fit for a selected job role using AI and NLP.
+**Author:** Danish M
 
-💡 Features
+A Python desktop application that extracts selected information from PDF resumes and compares candidate skills with a chosen job role. The application uses PDF text extraction and NLP-based matching to produce a preliminary role-fit summary.
 
-Upload and read PDF resumes
+## Features
+- Read text from PDF resume files.
+- Extract selected contact information.
+- Identify skills and relevant terms.
+- Compare extracted information against configured job-role requirements.
+- Produce a role-fit score and a preliminary selection indicator.
+- Save parsed information and matching results to text files.
+- Provide a desktop interface using Tkinter.
 
-Extract name, email, and phone number using NLP
+## Technology stack
+- Python 3
+- Tkinter
+- pdfplumber
+- spaCy
+- RapidFuzz
 
-Match skills and programming languages for roles like:
+## Prerequisites
+- Python 3.9 or later
+- PDF files containing machine-readable text
 
-Developer
+## Installation
 
-Data Analyst
-
-Manager
-
-Gives a score out of 100 and selection status
-
-Saves the results in .txt files
-
-Easy-to-use GUI with Tkinter
-
-🚀 How to Run
-
-1. Install the required packages:
-
+~~~bash
 pip install pdfplumber spacy rapidfuzz
 python -m spacy download en_core_web_sm
+~~~
 
+## Run the application
 
-2. Run the app:
-
+~~~bash
 python main.py
+~~~
 
-📁 Output Files
+## Output
 
-parsed_results.txt – full resume data
+The application is configured to save extracted and matching information in text files, including parsed_results.txt and selection_results.txt.
 
-selection_results.txt – name, role, score, and result (Selected / Not Selected)
+## Limitations and responsible use
 
-🛠 Built With
+Resume parsing can fail when PDFs contain scanned images, unusual layouts or inconsistent formatting. Skill matching is heuristic and may overlook equivalent experience or context. The score is not a validated hiring assessment and must not be used as the sole basis for recruitment decisions. Handle resumes as confidential personal data and apply appropriate access, retention and deletion controls.
 
-🌟 Python 🐍
-🌟 Tkinter 🖼️
-🌟 spaCy 🔍
-🌟 pdfplumber 📄
-🌟 rapidfuzz 🔧
+## Author
 
-🎥 Here's a video reference 
-
-https://drive.google.com/file/d/1OxzUVgo_WFUqvzwdm4KKnBZLSCa1Fqrx/view?usp=drivesdk
+Danish M
